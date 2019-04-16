@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>JS DOM Paragraph Style</title>
+    </head>
+    <body>
+        <p id="text">Javascript exercises - w3resources</p>
+        <div>
+            <button id="jsstyle" onclick="jsStyle()">Style</button>
+        </div>
+
+        <script>
+            function jsStyle(){
+                var css = document.getElementById("text");
+                css.style.fontSize = '24px';
+                css.style.color = 'blue';
+                css.style.fontFamily = 'georgia';
+            }
+        
+        </script>
+    </body>
+</html>
