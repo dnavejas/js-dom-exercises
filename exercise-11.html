@@ -16,7 +16,7 @@
 
         <script>
             function display_random_image(){
-                var theImages = [{
+                var arrImages = [{
                     src: "http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg", width: "240", height: "160"
                 }, 
                 {
@@ -26,21 +26,21 @@
                     src: "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg", width: "500", height: "343"
                 }];
                 
-                var preBuffer = [];
-                for (var i = 0, j = theImages.length; i < j; i++) {
-                    preBuffer[i] = new Image();
-                    preBuffer[i].src = theImages[i].src;
-                    preBuffer[i].width = theImages[i].width;
-                    preBuffer[i].height = theImages[i].height;
+                var arrEmpty = [];
+                for (var i = 0, j = arrImages.length; i < j; i++) {
+                    arrEmpty[i] = new Image();
+                    arrEmpty[i].src = arrImages[i].src;
+                    arrEmpty[i].width = arrImages[i].width;
+                    arrEmpty[i].height = arrImages[i].height;
                 }
-                function getRandomInt(min,max){   
-                    imn = Math.floor(Math.random() * (max - min + 1)) + min;
-                    return preBuffer[imn];
+                function getRandomInt(min, max){   
+                    imagen = Math.floor(Math.random() * (max - min + 1)) + min;
+                    return arrEmpty[imagen];
                 }
-                var newImage = getRandomInt(0, preBuffer.length - 1);
+                var newImage = getRandomInt(0, arrEmpty.length - 1);
                 var images = document.getElementsByTagName('img');
-                var l = images.length;
-                for (var p = 0; p < l; p++) {
+                var x = images.length;
+                for (var y = 0; y < x; y++) {
                     images[0].parentNode.removeChild(images[0]);
                 } 
                 document.body.appendChild(newImage);
